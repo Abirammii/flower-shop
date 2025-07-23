@@ -2,6 +2,7 @@
     --pink:#e84393;
     --white:#fff;
 }
+
 *{
     margin:0; padding:0;
     box-sizing: border-box;
@@ -38,7 +39,7 @@ section{
 
 header{
     position: fixed;
-    top:0; left:0; right:0;
+    top:0; left:0; right: 0;
     background-color:#fff;
     color:#000;
     padding:2rem 9%;
@@ -61,6 +62,7 @@ header .navbar a{
     padding:0 1.5rem;
     color: #333;
 }
+
 header .navbar a:hover{
     color:var(--pink)
 }
@@ -359,4 +361,45 @@ header .icons a:hover{
 .contact .row form textarea{
     height: 15rem;
     resize: none;
+}
+#menu-btn {
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+/* Show hamburger and hide menu on mobile */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar a {
+    font-size: 2rem;
+    padding: 1rem 0;
+    display: block;
+    width: 100%;
+  }
 }
