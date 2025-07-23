@@ -26,7 +26,10 @@
         <a href="#" class="fas fa-heart"></a>
         <a href="#" class="fas fa-shopping-cart"></a>
         <a href="#" class="fas fa-user"></a>
+        
      </div>
+     <div id="menu-btn" class="fas fa-bars"></div>
+
      </header>
      <section class="home" id="home">
         <div class="content">
@@ -50,8 +53,8 @@
          <p> In buds & blosooms, we believe in the power of simplicity and quality. Each flower is carefully selected to ensure freshness and beauty, creating arrangements that feel both modern and personal.</p>
          <p> We focus on thoughtful design and local sourcing whenever possible, so you get blooms that are not only stunning but also sustainable.</p><p> Our goal is to bring you flowers that brighten your day with ease and elegance, wrapped with care and delivered with love.</p>
 
-</p>
-         <p><a href="#" class="btn">learn more</a></p>
+          </p>
+         <a href="#" class="btn">learn more</a>
       
       </div>
       </div>
@@ -288,5 +291,20 @@
       </div>
       </div>
     </section>
+    <script>
+  const menuBtn = document.querySelector('#menu-btn');
+  const navbar = document.querySelector('.navbar');
+
+  menuBtn.onclick = () => {
+    menuBtn.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+  };
+
+  window.onscroll = () => {
+    menuBtn.classList.remove('fa-times');
+    navbar.classList.remove('active');
+  };
+</script>
+
 </body>
 </html>
